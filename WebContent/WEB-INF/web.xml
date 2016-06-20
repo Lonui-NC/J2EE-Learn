@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.j2ee.learn.TestServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>FormServlet</servlet-name>
+    <servlet-class>com.j2ee.learn.FormParameterServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>FormServlet</servlet-name>
+    <url-pattern>/FormParameterServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+  <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+  <filter>
+  	<filter-name>ImageFilter</filter-name>
+  	<filter-class>com.j2ee.learn.ImageFilter</filter-class>
+  		<init-param>
+  			<param-name>message</param-name>
+  			<param-value>Copyright:My J2EE!</param-value>
+  		</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>ImageFilter</filter-name>
+  	<url-pattern>/</url-pattern>
+  </filter-mapping>
+  
+  <init-param>
+  	<param-name>databasedriver</param-name>>
+  	<param-value>com.mysql.jdbc.Driver</param-value>
+  </init-param>>
+  <init-param>
+  	<param-name>databaseURL</param-name>
+  	<param-value>jdbc:mysql://localhost:3306/test</param-value>
+  </init-param>>
+  
+  
+  <!--后台处理脚本，定义对应上传路径 -->
+  <context-param>
+  	<description>Location to store uploaded file</description>
+  	<param-name>file-upload</param-name>
+  	<param-value>
+  		D:\J2EE Workspace\Test\resources
+  	</param-value>
+  </context-param>
+  
+  
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
