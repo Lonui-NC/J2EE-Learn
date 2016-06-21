@@ -19,5 +19,13 @@
 	<classpathentry kind="lib" path="D:/web html/commons-io-2.5-bin/commons-io-2.5/commons-io-2.5.jar"/>
 	<classpathentry kind="lib" path="D:/web html/jaf-1_0_2-upd2/jaf-1.0.2/activation.jar"/>
 	<classpathentry kind="lib" path="D:/web html/javax.mail-1.5.5.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jakarta-taglibs-standard-1.1.2/jakarta-taglibs-standard-1.1.2/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jakarta-taglibs-standard-1.1.2/jakarta-taglibs-standard-1.1.2/lib/standard.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jar lib/resolver.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jar lib/serializer.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jar lib/xalan.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jar lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jar lib/xercesSamples.jar"/>
+	<classpathentry kind="lib" path="D:/web html/jar lib/xml-apis.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

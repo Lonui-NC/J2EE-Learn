@@ -144,8 +144,7 @@
 <p>Total number of visits: <%= hitsCount%></p>
 
  
-<%
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </center>
 </html>
 
