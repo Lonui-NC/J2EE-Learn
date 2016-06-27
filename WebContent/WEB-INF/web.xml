@@ -72,6 +72,16 @@
   </context-param>
   
   
+  
+  
+  <!-- 定义对资源的保护 -->
+  
+  
+  <login-config>
+  	<auth-method>BASIC</auth-method>
+  	<realm-name>default</realm-name>
+  </login-config>
+  
   <session-config>
     <session-timeout>30</session-timeout>
   </session-config>

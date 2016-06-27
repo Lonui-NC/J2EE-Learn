@@ -67,7 +67,7 @@
 	Integer visitCount=new Integer(0);
 	String visitCountKey=new String("visitCount");
 	String userIDKey=new String("userID");
-	String userID=new String("ABCD");
+	String userID=new String("ABCD");	
 	//检查网页是否由新用户访问
 	if(session.isNew())
 	{
@@ -145,6 +145,72 @@
 
  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+
+<jsp:useBean id="date2" class="java.util.Date"></jsp:useBean>
+<p>The date is <%= date2 %>
+
+<jsp:useBean id="students" class="com.j2ee.learn.StudentBean">
+	<jsp:setProperty name="students" property="firstName" 
+					value="Zara"/>
+	<jsp:setProperty name="students" property="lastName" 
+                    value="Ali"/>
+   <jsp:setProperty name="students" property="age" 
+                    value="10"/>
+</jsp:useBean>
+
+<p>Students First Name:
+	<jsp:getProperty property="firstName" name="students"/>
+</p>
+<p>Student Last Name: 
+   <jsp:getProperty name="students" property="lastName"/>
+</p>
+<p>Student Age: 
+   <jsp:getProperty name="students" property="age"/>
+</p>
+
+<!-- 在jsp中使用自定义tag -->
+<%@ taglib prefix="ex" uri="WEB-INF/custom.tld" %>
+
+
+<!-- param JSP el 访问信息 -->
+<p>${param["username"]}</p>
+
+<p>${header["user-agent"]}</p>
+
+<%@ page import="java.io.*,java.util.Locale" %>
+<%@ page import="javax.servlet.*,javax.servlet.http.*" %>
+
+<%
+	//获取本地客户端信息
+	Locale locale=request.getLocale();
+	String language=locale.getLanguage();
+	String country=locale.getCountry();
+%>
+
+<%
+	out.println("Language:"+language+"<br/>");
+	out.println("Country:"+country+"<br/>");
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </center>
 </html>
 

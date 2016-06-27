@@ -1,0 +1,14 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>Example</short-name>
+	<tag>
+		<name>Hello</name>
+		<tag-class>com.j2ee.learn.HelloTag</tag-class>
+		<body-content>scriptless</body-content>
+		<!-- 在对应其中加入attribute属性 -->
+		<attribute>
+			<name>message</name>
+		</attribute>
+	</tag>
+</taglib>

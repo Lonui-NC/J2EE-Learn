@@ -31,5 +31,25 @@
    <%= request.getParameter("last_name")%>
 </p></li>
 </ul>
+
+<!-- 在jsp中使用自定义tag -->
+<%@ taglib prefix="ex" uri="WEB-INF/custom.tld" %>
+<ex:Hello message="this is a custom tag"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
